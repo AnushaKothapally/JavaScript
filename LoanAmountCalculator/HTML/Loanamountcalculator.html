@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <h2> Loan amount calculator</h2>
+    </head>
+<body>
+<script src="../JS/Loanamount.js"></script>
+<table border="2">
+    <tr>
+    <td>
+        Loan-Amount($):
+        <input type="text" id="lamount" />
+        </td>
+    </tr>
+  
+    <tr><td>
+    Amount of Interest:(%)
+    <input type="text" id="linterest">
+   </td> </tr>
+    <tr><td>
+        Repayment period(years):
+        <input type="text" id="lyrs"/>
+    </td></tr>
+    <tr>
+    <td>
+        Approximate payments:
+        <button onclick="calculator()">Calculate</button>
+  </td>  </tr>
+    <tr><td>
+    Monthly-Payment:
+        <output id="op1"/>
+    </td></tr>
+    <tr><td>
+    Total-Interest:
+        <output id="op2"/>
+    </td></tr>
+    
+   
+<tr><td>
+     Total-Payment:
+    <output id="op3"/>
+  </td>  </tr>
+</table>    
+</body>
+</html>
