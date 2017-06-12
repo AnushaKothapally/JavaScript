@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title> Add Customers</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    .row.content {height: 700px}
+    .sidenav{
+        background-color: lightgray;
+        height:100%;
+        padding-right: 0px;
+    }  
+    .header{
+        text-align: center;
+        background-color: aliceblue;
+    }
+    .navm{
+        height: 10px;
+        margin-bottom: 0px;
+        padding-left: 20px;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+<div class="row content">
+<nav class="navbar navbar-inverse navm">
+<ul class="nav navbar-nav">
+        <li> <a href="home.html" id="gohome">Home </a></li>
+        <li><a href="addcustomer.html" id="add"> Add Customer</a></li>
+    <li><a href="viewcustomers.html" id="add"> View Customer</a></li>
+    </ul>
+</nav>
+<div class="col-sm-12 header"> <h1>Customer Application</h1></div>
+
+<div class="col-sm-2 sidenav">
+    <ul id="ul1" class="nav nav-pills nav-stacked">
+        <li>
+        <a href="addcustomer.html" target="_self"> Add Customer</a>
+        </li>
+        <li >
+            <a href="viewcustomers.html" target="_self" onclick="viewdetail()">View Customers</a>
+        </li>
+    </ul>
+</div>
+<div class="col-sm-9">
+main area
+</div></div>
+<script src="addcus.js"></script>
+</div>
+</body>
+</html>

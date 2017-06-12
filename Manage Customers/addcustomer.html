@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="addcus.css">
+    <!--  <link rel="stylesheet" href="bootstrap.css">-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li> <a href="home.html" id="gohome">Home </a></li>
+        <li><a href="viewcustomers.html" id="add"> View Customer</a></li></ul>
+        </nav>
+        <div id="c1" class='container'><h1> Add Customer</h1></div>
+      <div id="container" class="container">
+        <form id="form1"><div class="form-group">
+          <div id="personal" class="panel panel-info"><div class="panel-heading">Personal Information</div>
+          <div class="panel-body">
+            <label for="fname" >First Name</label>
+            <input type="text" class="form-control" id="fname" placeholder="Enter FirstName">
+              <label for="lname">Last Name</label>
+              <input type="text" class="form-control" id="lname"  placeholder="Enter LastName">
+                <label for="gender" class="radio control-label" >Gender</label>
+
+              <label class="radio-inline"><input name="gender"  type="radio" id="r1" value="Male"> Male</label> 
+
+              <label class="radio-inline">    <input name="gender" type="radio" id="r2" value="Female">Female</label> 
+
+                <label class="radio-inline"> <input name="gender" type="radio" id="r3" value="other">Other</label> 
+                            <div>
+                      <label for="birthdate" >Date of Birth</label>
+                      <input type="date" id="birthdate" class="form-control"></div>
+                      </div></div>
+                    
+                      <div id="address" class="panel panel-info">
+                          <div class="panel-heading">Address</div>
+                      <div class="panel-body">
+                        <label for="aline1">Address Line 1:</label>
+                        <input type="text" class="form-control" id="aline1">
+                          <label for="aline2">Address Line 2:</label>
+                          <input type="text" class="form-control" id="aline2">
+                          <div class="col-*-*">
+                              <label for="pc1">ZIP Code:</label>
+                              <input type="text" class="form-control" id="pc1">
+                          </div>
+                            <label for="city" >City :</label>
+                            <input type="text"  class="form-control"id="city">
+                              <label for="country">Country :</label>
+                              <Select id="country" class="form-control">
+                                <option></option>
+                                <option>India </option>
+                                <option> USA</option>
+                                <option>Other</option>
+                              </Select>
+                          </div> </div>
+                           
+                            <div id="Phone" class="panel panel-info"> <div class="panel-heading">Phone</div>
+                            <div class="panel-body">
+                              <table class="table table-striped" id="table1" >
+                                    <thead>
+                                       <tr>
+                                            <th>Primary </th>
+                                            <th>Phone</th>
+                                            <th>Type</th>
+                                            <th>Action</th>
+                                       <tr>
+                                    </thead>
+                                    <tbody  id="phonetable" >
+                                    <tr>
+                                        <td><input type="radio" name="phone" id="isprimary"></td>
+                                        <td><input type="text" class="form-control" id="phnum"></td>
+                                        <td><select id="phtype" class="form-control" >
+                                            <option></option>
+                                            <option> Work</option>
+                                            <option>Personal</option>
+                                          </select>
+                                        </td>
+                                        <td><button type="button" id="b1" class="btn btn-primary btn-sm" value="+Add row" onclick="createrow(this)"> +Add row</button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                </div>
+
+                                <div id="email" class="panel panel-info"><div class="panel-heading">EMAIL</div> 
+                                <div class="panel-body">
+
+                                <label for="emailId">Email ID:</label>
+                                <div class="input-group">
+                                <input type="email" class="form-control" id="mail">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span></div>
+                                </div></div>
+                                  <br>
+                                    <br>
+                                      <div id="divb1">
+                                        <input type="button" id="formb1" value="ADD CUSTOMER" class="btn btn-primary" onclick="add()">
+                                          <input type="button" id="formb2" value="RESET" class="btn btn-primary" onclick="reset()">
+                                          </div>
+                                        </div></form>
+                                      </div>
+                                      <script type="text/javascript" src="addcus.js"></script>
+                                    <script>
+                                           
+    function creater(x){    
+   
+    }
+    
+                                    </script>
+                                    </body>
+                                  </html>

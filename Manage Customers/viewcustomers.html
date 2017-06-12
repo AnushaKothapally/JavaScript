@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="viewcus.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body id="body" onload="viewdetail()">
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li> <a href="home.html" id="gohome">Home </a></li>
+        <li><a href="addcustomer.html" id="add"> Add Customer</a></li></ul>
+</nav>
+<div id="main">
+    <div style="text-align:center">
+        <h1>Customers</h1>
+    </div>
+<table id="viewtable" class="table table-striped" style="width:50%">
+</table> 
+<div><input type="button" class="btn btn-primary"id="removeAll" value="Remove All Customers" onclick="clearstorage()"></div>    
+</div>
+<div id="popup">
+<span id="close" class="glyphicon glyphicon-remove" onclick="closepopup()"></span>
+<div id="displaypop">
+<form id="details"><div class="form-group">
+<span id="sp1"> Firstname: </span>
+<span id="sp2">Lastname: </span>
+<span id="sp3">Gender: </span>
+<span id="sp4">DOB: </span>
+<span id="sp5">AdderssLine1: </span>
+<span id="sp6">AddressLine2: </span>
+<span id="sp7">City: </span>
+<span id="sp8">Country: </span>
+<span id="sp9">Phone: </span>
+<span id="sp10">Email: </span>
+</div></form>
+</div>
+</div>
+
+    <script src="addcus.js"></script>
+</body>
+</html>

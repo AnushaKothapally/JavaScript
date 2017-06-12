@@ -1,0 +1,36 @@
+#popup{
+    position: absolute;
+    left: 25%;
+    width: 40%;
+    height: 80%;
+    top:15%;
+    background-color: antiquewhite;
+    display: none;
+    text-align: right;
+
+}
+span{
+    display: block;
+}
+#displaypop{
+        margin-top: 50px;
+    text-align: center;
+
+    
+}
+#close{
+    margin: 5px;
+    cursor: pointer;
+}
+
+#removeAll{
+    display: none;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+table{
+    margin: auto;
+    margin-top: 50px;
+}
