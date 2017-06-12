@@ -1,0 +1,114 @@
+<!Doctype html>
+<html>
+<head>
+    <style>
+        #header{
+            font-size: 30px;
+            color: cadetblue;
+            height: 40px;
+            width: 100%;
+            margin: 40px 0px 20px 0px;
+            border: 0px solid brown;
+            padding: 20px 0px 10px 0px;
+            background-color: azure;
+        }
+        #mainarea{
+            border: 1px solid gray;
+            height: 400px;
+            margin: 0px 450px 0px 450px;
+            padding: 20px 20px 20px 100px;
+            
+        }
+        .divinside {
+            margin: 10px 0px 5px 0px;
+        }
+        
+        label{
+            padding: 2px 10px 2px 0px;
+            font-size: 15px;
+            font-family: sans-serif;
+            display: block;
+        }
+        input[type="password"], input[type="email"]{
+            width: 250px;
+            line-height: 20px;
+        }
+        input[type="button"], input[type="url"]{
+            width: 257px;
+            cursor: pointer;
+                border-color: #9e3520;
+            background-color: #0f7596;
+            opacity: 0.5;
+            color: linen;
+            size: landscape;
+            line-height: 20px;
+        }
+        
+        #pwdlabel{
+            width:36%;
+            float: left;
+        }
+        #pwdforgot{
+            width:60%;
+            float:left;
+        }
+        #new{
+            color: cornflowerblue;
+            margin:100px 0px 0px 0px;
+            
+        }
+        h5{
+            margin: 10px 0px 10px 0px;
+            
+        }
+        #a1{
+            opacity: 0.5;
+            line-height: 20px;
+            text-decoration: none;
+            font-size: 11px;
+            font-family: sans-serif;
+            border-width: 2px;
+            border-color: #9e3520;
+            border-style: solid;
+            background: buttonface; 
+            background-color: #0f7596;
+            padding:5px 90px 5px 90px;
+            color:aliceblue;
+        }
+    </style>
+</head>
+    <body>
+    <div id="header">
+        <center> Tutorial.com</center>
+    </div>
+    <form>
+    <div id="mainarea">
+        <span id="signin" style="font-size:28px;padding: 20px 0px 10px 0px;font-weight:500px;">Sign in</span>
+        <div class="divinside">
+            <label for="email">Email:</label>
+            <input type="email" id="email"/>
+        </div>
+        <div class="divinside">
+            <div id="pwdlabel">
+            <label for="pwd">Password:</label>
+            </div>
+            <div class=pwdforgot>
+            <a href="https://www.google.com">Forgot your password?</a>
+            </div>
+            <input type="password" id="pwd"/>
+        </div>
+        <div class="divinside">
+        <input type="button" value="Sign In" id="button"/>
+        </div>
+        <div id="new">
+        <hr>
+        <h5> New to Tutorial.com</h5>
+        </div>
+        <span>
+            <a href="" id="a1">Sign up here</a>
+        </span>
+    </div>
+    </form>
+    
+</body>
+</html>
