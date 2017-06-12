@@ -1,0 +1,7 @@
+Developed using HTML5, Bootstrap, CSS3 and object-based javasript.
+In this application we can create new customers with details name,email,address and phone number, We can provide multiple phone numbers 
+to a customer. We can view all the created customers details in view customers tab.
+Here we are displaying primarly users name and primary phone number. By clicking on view All details we can see all the details of customer 
+entered while creating record.
+We can remove individual customer from the record.
+And we also can remove All the customers at a time from the record.
