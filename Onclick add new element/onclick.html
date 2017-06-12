@@ -1,0 +1,52 @@
+<html>
+<form>
+  <p id="p1" onclick="addnewelement();hide(op1,true);">  Whats is your favourite color: </p>
+    <output id="op1">
+    Hello everyone!
+    </output>
+    </form>
+<!--  <input type="text" id="id1" name="color"/>
+ <br>
+ <!--    <input type="button" id="b1" value="click me" onclick=addnewelement()/> </form>
+ <input type="button" value="click me" onclic="redirecttogoogle()"/>-->
+  
+  <script>
+      function changecolor(){
+          document.getElementById("p1").style.color="red"; 
+          alert(hello);
+      }
+    function addnewelement(){
+   var log=document.getElementById("p2");
+        if(!log){
+            log=document.createElement("p");
+            //log1=documemt.createElement("input");
+            //log1.id="it1"
+           // log1.type="text";
+            log.id="debuglog";
+            log.innerHTML="adding new element";
+            document.body.appendChild(log);
+           // document.body.appendChild(log1);
+            
+        }
+      //alert("thanks");
+    }
+      function hide(op1,flag){
+          var element=document.getElementById("op1").style.color="green";
+          if(flag){
+          op1.style.visibility="hidden";
+            //element.display="none";
+          }
+          else
+              op1.style.visibility="initial"; //why it is not getting reset?
+          
+      }
+      function function1(){
+          alert("Hie");
+          var ans=confirm("is it ok to redirect?");
+          if(ans){
+              window.location="http://www.google.com";
+          }
+      }
+      setTime(function1,6000)
+  </script>
+</html>
