@@ -1,0 +1,118 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 //var fname is local to function to f1 but we can access it from outside through the inner function. since the outer function variables are accessed to inner variables.It would help us to implement encapsulation in js.\
+\
+Ex: function Person(name)\{\
+	this.personname=name;\
+\}\
+var p1=new Person();\
+p1.personname=1;\
+console.log(p1.personname);\
+\'97\'97\'97\'97\'97\'97 Here we will not be able to restrict the user to  provide non-integer name. If we allow the caller to modify the data directly we will not be able to force any validation logic. therefore if we can use a inner function which has access to outer function ever after it has returned, we can enforce validation logic.\
+\
+function Person()\{\
+var personname=\'93\'94;\
+this.setPersonName=function(newValue)\{\
+personname=newValue;\
+\}\
+this.getPersonName=function()\{\
+return personage;\
+\}\
+\}\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+function Person() \{\
+  var personname = null;\
+  this.setPersonName = function (newValue) \{\
+    var regEx = /\\d+/g;\
+    if (regEx.test(newValue)) \{\
+      alert('invalid name');\
+    \} else \{\
+      personname = newValue;\
+    \}\
+  \}\
+  this.getPersonName = function () \{\
+    return personname;\
+  \}\
+\}\
+var p1 = new Person();\
+p1.setPersonName('John');\
+console.log(p1.getPersonName());\
+\'97 we can\'92t access personname directly but could access through inner- functions.\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+diff way to construct setter and getter is:\
+(1)\
+function person()\{\
+this.firstname=0;\
+this.lastname=0;\
+\}\
+Object.__defineSetter.call(person.prototype,"setName",function(value)\{\
+  var parts=value.toString().split(" ");\
+  this.firstname=parts[0]||"";\
+  this.lastname=parts[1]||"";\
+\});\
+\
+Object.__defineGetter.call(person.prototype,"getName",function()\{\
+\
+return this.firstname+" "+this.lastname;\
+\});\
+\
+var p1=new person();\
+p1.setName="Samuel Patta";\
+console.log(p1.getName);\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+(2)\
+function person() \{\
+  this.firstname = 0;\
+  this.lastname = 0;\
+\}\
+Object.defineProperty(person.prototype, 'name', \{\
+  get: function () \{\
+    return this.firstname + ' ' + this.lastname;\
+  \},\
+  set: function (value) \{\
+    var parts = value.toString().split(' ');\
+    this.firstname = parts[0]||"";\
+    this.lastname = parts[1]||"";\
+  \}\
+\})\
+var p1 = new person();\
+p1.name = 'Samuel Patta';\
+console.log(p1.name);\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+function f1(name) \{\
+  var fname = 'Anusha';\
+  function f2() \{\
+    return fname + ' ' + name;\
+  \}\
+  return f2();\
+\}\
+f1('Kothapally');\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+function person(fname, lname, age, salary) \{\
+  var _fname = fname;\
+  var _lname = lname;\
+  var _age = age;\
+  var _salary = salary;\
+  this.getlastname = function () \{\
+    return _lname;\
+  \}\
+  this.getpersonAge = function () \{\
+    return _age;\
+  \}\
+  this.getpersonSalary = function () \{\
+    return _salary;\
+  \}\
+  this.getfirstname = function () \{\
+    return _fname;\
+  \}\
+\}\
+var p1 = new person('Samuel', 'Patta', 50, 100000);\
+var p2 = new person('Sri', 'Dasari', 28, 90000);\
+console.log(p1.getfirstname());\
+console.log(p2.getfirstname());}
